@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:antiquewhite;
+        }
+        header {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        #course-list {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background-color: #ffffff;
+            border: 1px solid #e1e1e1;
+            margin-bottom: 1em;
+            padding: 1em;
+            border-radius: 5px;
+        }
+        .course h2 {
+            margin-top: 0;
+        }
+        #color{
+             color: red;            
+        }
+        #part{
+            color:blue ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+  <h1>Course List</h1>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for your course" title="Type in a name">
+</header>
+<div class="container" >
+    <ul id ="course-list">
+        <li><a href="#">
+            <h2 id="color">Introduction to Web Development</h2></a>
+            <p>An introductory course on web development technologies and concepts.</p>
+            <p id="part">Duration: 6 weeks</p>
+            <p id="part"> Format: offline.</p></p>
+        </li>
+        <li><a href="#">
+            <h2 id="color">Python Programming for Beginners</h2></a>
+            <p >Description: Learn the fundamentals of Python programming, including syntax, data types, and control structures. Develop simple applications and gain a solid foundation in coding.
+                <p id="part">Duration: 8 weeks</p>
+                <p id="part"> Format: Online.</p></p>
+            </li>
+            <li ><a href="#">
+                <h2 id="color">Data Science Fundamentals</h2></a>
+                <p>Learn the basics of data science, including data analysis and visualization.</p>
+                <p id="part">Duration: 8 weeks</p>
+                <p id="part"> Format: Online.</p></p>
+            </li>
+            <li><a href="#">
+                <h2 id="color"> Digital Marketing Masterclass</h2></a>
+                <p>Explore various digital marketing strategies, including SEO, social media, email campaigns, and analytics. Gain practical skills to promote businesses online effectively.</p>
+                <p id="part">Duration: 10 weeks</p>
+                <p id="part"> Format: Online.</p></p>
+            </li>
+            <li ><a href="#">
+                <h2 id="color"> Creative Writing Workshop</h2></a>
+                <p>Unleash your creativity through writing exercises and workshops. Explore various genres, styles, and techniques to develop your unique voice as a writer.</p>
+                <p id="part">Duration: 6 weeks</p>
+                <p id="part"> Offline (In-person)</p></p>
+            </li>
+            <li ><a href="#">
+                <h2 id="color"> Financial Literacy for Beginners</h2></a>
+                <p>Understand personal finance concepts, including budgeting, saving, investing, and managing debt. Build a strong foundation for making informed financial decisions.</p>
+                <p id="part">Duration: 4 weeks</p>
+                <p id="part"> Offline (In-person)</p></p>
+            </li>
+            <li ><a href="#">
+                <h2 id="color">  Introduction to Graphic Design</h2></a>
+                <p> Learn the basics of graphic design, including color theory, typography, and layout. Create visually appealing designs using software like Adobe Illustrator..</p>
+                <p id="part">Duration: 12 weeks</p>
+                <p id="part"> Offline (In-person)</p></p>
+            </li>
+            <li ><a href="#">
+                <h2 id="color">  Spanish Language Immersion</h2></a>
+                <p> Immerse yourself in the Spanish language and culture. Develop speaking, listening, reading, and writing skills through interactive activities and conversations.</p>
+                <p id="part">Duration: 16 weeks</p>
+                <p id="part"> Online</p></p>
+            </li>
+            <li><a href="#">
+                <h2 id="color">   Introduction to Artificial Intelligence</h2></a>
+                <p>  Explore the foundations of AI, including machine learning and neural networks. Understand how AI technologies are shaping various industries.</p>
+                <p id="part">Duration: 8 weeks</p>
+                <p id="part"> Online</p></p>
+            </li>
+            <li ><a href="#">
+                <h2 id="color">  Yoga and Mindfulness Meditation</h2></a>
+                <p>  Discover yoga postures and mindfulness techniques for stress reduction and relaxation. Enhance physical flexibility and mental well-being.</p>
+                <p id="part">Duration: 8 weeks</p>
+                <p id="part"> Offline (In-person)</p></p>
+            </li>
+            <li><a href="#">
+                <h2 id="color">   Introduction to Astrophysics</h2></a>
+                <p> Delve into the mysteries of the universe, studying celestial bodies, cosmology, and the fundamental principles of astrophysics.</p>
+                <p id="part">Duration: 14 weeks</p>
+                <p id="part"> Online</p></p>
+            </li>
+            <li><a href="#">
+                <h2 id="color">    Professional Development and Career Success</h2></a>
+                <p> Learn essential skills for career growth, including communication, networking, time management, and goal setting. Gain insights into building a successful professional trajectory.</p>
+                <p id="part">Duration: 6 weeks</p>
+                <p id="part"> Online</p></p>
+            </li>
+            <!-- Add more courses as needed -->
+        </ul>
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("course-list");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+            </script>
+            </div>
+</body>
+</html>
