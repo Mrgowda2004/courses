@@ -1,0 +1,46 @@
+
+body, h1, h2, p {
+    margin: 5;
+    padding: 5;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:mistyrose;
+}
+
+header, footer {
+    background-color: #333;
+    color:azure;
+    padding: 1rem;
+    text-align: center;
+}
+
+section {
+    padding: 1rem;
+    margin: 1rem;
+    background-color:aliceblue;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.preferences select {
+    padding: 0.5rem;
+}
+
+.feedback textarea {
+    width: 100%;
+    padding: 0.5rem;
+}
+button{
+    color: red;
+}
+button:hover{
+    color: blue;
+}
